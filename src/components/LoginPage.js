@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const LoginPage = ({ onLogin }) => {
@@ -148,7 +148,7 @@ const LoginPage = ({ onLogin }) => {
                     <input type="checkbox" className="checkbox checkbox-sm border-white border-opacity-30 checked:border-purple-400" />
                     <span className="text-white text-opacity-70">Remember me</span>
                   </label>
-                  <a href="#" className="text-purple-300 hover:text-purple-200 transition-colors">Forgot password?</a>
+                  <button type="button" className="text-purple-300 hover:text-purple-200 transition-colors btn-link">Forgot password?</button>
                 </div>
 
                 <button
@@ -192,7 +192,7 @@ const LoginPage = ({ onLogin }) => {
 
               <div className="text-center mt-6">
                 <p className="text-white text-opacity-60 text-sm">
-                  Don't have an account? <a href="#" className="text-purple-300 hover:text-purple-200 font-semibold transition-colors">Sign up</a>
+                  Don't have an account? <Link to="/register" className="text-purple-300 hover:text-purple-200 font-semibold transition-colors">Sign up</Link>
                 </p>
               </div>
             </div>
